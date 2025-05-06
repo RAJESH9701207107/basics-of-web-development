@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My First Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f0f8ff, #d0f0c0);
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2e8b57;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    img {
+      width: 300px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    ul {
+      background-color: #e0ffe0;
+      padding: 15px;
+      border-radius: 8px;
+      width: fit-content;
+    }
+
+    a {
+      color: #006400;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    #greeting {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #2f4f4f;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to My First Webpage</h1>
+  <p>This is a basic HTML page styled with CSS and made interactive with JavaScript.</p>
+
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Nature">
+
+  <p>Here are some useful links:</p>
+  <ul>
+    <li><a href="https://www.w3schools.com" target="_blank">Learn HTML</a></li>
+    <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+  </ul>
+
+  <button onclick="showGreeting()">Click Me!</button>
+  <p id="greeting"></p>
+
+  <script>
+    function showGreeting() {
+      const name = prompt("What's your name?");
+      if (name) {
+        document.getElementById("greeting").innerText = `Hello, ${name}! Thanks for visiting!`;
+      } else {
+        alert("You didn't enter a name.");
+      }
+    }
+  </script>
+
+</body>
+</html>
